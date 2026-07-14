@@ -21,25 +21,33 @@ def move_horizontal(index, piece, direction):
     board[index + direction] = piece
 
 def setup():
-    pass
-for i in range(len(board)):
-    tile = pygame.Rect(((100 + (i%8)*50),(100 + 50 * (math.floor(i/8))), 50, 50))
-    number = number + 1
+    global tile
+    global number
+    for i in range(len(board)):
+       tile = pygame.Rect(((100 + (i%8)*50),(100 + 50 * (math.floor(i/8))), 50, 50))
+       pygame.draw.rect(screen, (255, 255, 255), tile)
+       number = number + 1
 
+
+def update():
+    screen.fill((0, 0, 0))
+    pygame.display.update()
+    setup()
 
 
 
 print(board)
 run = True
+screen.fill((0, 0, 0))
+update()
 while run:
-    screen.fill((0, 0, 0))
-    pygame.draw.rect(screen, (255, 255, 255), tile)
+    
 
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             run = False
     
-    pygame.display.update()
+    
 
 pygame.quit()
 
