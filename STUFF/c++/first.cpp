@@ -1,6 +1,14 @@
 #include <iostream>
+using namespace std;
 
 int main() {
-    std::cout << "C++ setup is working!" << std::endl;
+    int num;
+    cout << "C++ setup is working!\n";
+    cin >> num;
+    cout << "Hello My Friend!";
+    cout << num;
+    
+
+
     return 0;
 }
