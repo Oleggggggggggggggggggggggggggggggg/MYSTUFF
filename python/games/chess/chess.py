@@ -36,7 +36,7 @@ def update():
 
 
 
-print(board)
+
 run = True
 screen.fill((0, 0, 0))
 update()
